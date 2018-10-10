@@ -57,3 +57,10 @@ print(newlineRegex.search('serve the public trust.\nprotect the innocent\nuphold
 robocop = re.compile(r'robocop', re.I)
 print(robocop.search('Robocop is part man, part machine, all cop.').group())
 print(robocop.search('ROBOCOP protects the innocent').group())
+
+# substituting strings with the sub() method
+nameRegex1 = re.compile(r'Agent \w+')
+print(nameRegex1.sub('censored', 'Agent Alice gave the secret documents to Agent Bob.'))
+agentNamesRegex = re.compile(r'Agent (\w)')
+print(agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'))
+

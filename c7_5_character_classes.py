@@ -52,3 +52,8 @@ noNewlineRegex = re.compile('.*')
 print(noNewlineRegex.search('serve the public trust.\nprotect the innocent\nuphold the law').group())
 newlineRegex = re.compile('.*', re.DOTALL)
 print(newlineRegex.search('serve the public trust.\nprotect the innocent\nuphold the law').group())
+
+# case-insensitive matching
+robocop = re.compile(r'robocop', re.I)
+print(robocop.search('Robocop is part man, part machine, all cop.').group())
+print(robocop.search('ROBOCOP protects the innocent').group())

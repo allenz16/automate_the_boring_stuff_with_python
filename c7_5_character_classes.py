@@ -61,6 +61,17 @@ print(robocop.search('ROBOCOP protects the innocent').group())
 # substituting strings with the sub() method
 nameRegex1 = re.compile(r'Agent \w+')
 print(nameRegex1.sub('censored', 'Agent Alice gave the secret documents to Agent Bob.'))
-agentNamesRegex = re.compile(r'Agent (\w)')
+agentNamesRegex = re.compile(r'Agent (\w)\w+')
+print(agentNamesRegex.search('Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.').group())
 print(agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'))
+
+# managing complex regex
+phoneRegex = re.compile(r'''(
+    (\d{3}|\(\d{3}\))?
+    (\s|-|\.)?
+    \d{3}
+    (\s|-|\.)?
+    \d{4}
+    (\s*(ext|x|ext.)\s*\d{2,5})?
+)''', re.VERBOSE)
 

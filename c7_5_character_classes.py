@@ -75,3 +75,6 @@ phoneRegex = re.compile(r'''(
     (\s*(ext|x|ext.)\s*\d{2,5})?
 )''', re.VERBOSE)
 
+# combining re.IGNORECASE, re.DOTALL, re.VERBOSE
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
+

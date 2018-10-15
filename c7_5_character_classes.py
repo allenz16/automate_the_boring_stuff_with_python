@@ -20,7 +20,7 @@ print('mo3 :', mo3)
 # the caret ^ and dollar sign $ char
 beginsWithHello = re.compile(r'^Hello')
 mo4 = beginsWithHello.search('Hello World')
-print('mo4 :', mo4)
+print('mo4 :', mo4.group())
 
 endsWithNumber = re.compile(r'\d$')
 mo5 = endsWithNumber.search('Your number is 42')

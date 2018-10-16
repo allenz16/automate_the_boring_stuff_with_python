@@ -1,12 +1,21 @@
 # strong password detection
 import re
+passRegex = re.compile(r'(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}')
 # capture a password
-#password = input('please input your password : ')
+while True:
+
+    password = input('please input your password : ')
+    mo1 = passRegex.search(password)
+    if mo1 is not None:
+        print('nice password')
+        break
+    else:
+        print('bad password')
+print('done')
+
+
 # create password regex
-passRule1 = re.compile(r'(?=.*?[A-Z])')
-passRule2 = re.compile(r'at least 8 digit long')
-passRule3 = re.compile(r'at least 1 num')
-mo0 = passRule1.search('UkkKll26')
-print(mo0.group())
+
+
 
 

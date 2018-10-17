@@ -30,3 +30,15 @@ print(calcFilePath.split(os.path.sep))
 print(os.path.getsize('c:\\Windows\\System32\\calc.exe'))
 # list folder content
 print(os.listdir('c:\\A'))
+# find the total size of a folder
+totalSize = 0
+for filename in os.listdir('c:\\A'):
+    totalSize = totalSize + os.path.getsize(os.path.join('c:\\A', filename))
+print(totalSize)
+# check whether a path exist
+print(os.path.exists('c:\\A'))
+# check whether it is a file
+print(os.path.isfile('c:\\A'))
+# check whether it is a folder
+print(os.path.isdir('c:\\A'))
+

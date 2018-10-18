@@ -24,3 +24,19 @@ mo4 = tRegex.search('alice and bob')
 print(mo4.group())
 
 
+import random
+capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix', 'Arkansas': 'Little Rock', 'California': 'Sacramento'}
+states = list(capitals.keys())
+print(capitals.values())
+#print(capitals.keys())
+print(states)
+for questionNum in range(0, 2):
+    correctAnswer = capitals[states[questionNum]]
+    print(correctAnswer)
+    #print(capitals.values())
+    wrongAnswers = list(capitals.values())
+    del wrongAnswers[wrongAnswers.index(correctAnswer)]
+    #wrongAnswers = random.sample(wrongAnswers, 3)
+    print(wrongAnswers)
+
+

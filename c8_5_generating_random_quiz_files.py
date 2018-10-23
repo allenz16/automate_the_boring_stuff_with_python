@@ -1,5 +1,5 @@
 import random
-# the quiz data
+# The quiz data.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
    'Connecticut': 'Hartford', 'Delaware': 'Dover', 'Florida': 'Tallahassee',
@@ -17,21 +17,21 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Nashville', 'Texas': 'Austin', 'Utah': 'Salt Lake City', 'Vermont':
    'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia':
    'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
-# generate 35 quiz files
+# Generate 35 quiz files.
 for quizNum in range(35):
-    # create the quiz and answer key files
+    # Create the quiz and answer key files.
     quizFile = open('c:\\A\\capitalsquiz%s.txt' % (quizNum + 1), 'w')
     answerKeyFile = open('c:\\A\\capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
-    # write out the header for the quiz
+    # Write out the header for the quiz.
     quizFile.write('Name:\n\nData:\n\nPeriod:\n\n')
     quizFile.write((' ' * 20) + 'State Capital Quiz (Form %s)' % (quizNum + 1))
     quizFile.write('\n\n')
-    # shuffle the order of the states
+    # Shuffle the order of the states.
     states = list(capitals.keys())
     random.shuffle(states)
-# loop through all 50 states, making a question for each
+    # Loop through all 50 states, making a question for each.
     for questionNum in range(50):
-        # get right and wrong answers
+        # Get right and wrong answers.
         correctAnswer = capitals[states[questionNum]]
         wrongAnswers = list(capitals.values())
         del wrongAnswers[wrongAnswers.index(correctAnswer)]

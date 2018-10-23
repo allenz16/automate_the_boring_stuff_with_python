@@ -42,5 +42,5 @@ for questionNum in range(0, 2):
     answerOptions = wrongAnswers + [correctAnswer]
     #print('answerOptions are : ', answerOptions)
     random.shuffle(answerOptions)
-    #print('answerOptions are : ', answerOptions)
+    print('answerOptions are : ', answerOptions)
 

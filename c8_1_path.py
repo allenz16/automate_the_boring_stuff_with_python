@@ -21,9 +21,9 @@ calcFilePath = 'c:\\Windows\\System32\\calc.exe'
 # get a path's basename and dirname
 print(os.path.split(calcFilePath))
 # get basename
-print(os.path.basename(calcFilePath))
+print('basename is :', os.path.basename(calcFilePath))
 # get dirname
-print(os.path.dirname(calcFilePath))
+print('dirname is :', os.path.dirname(calcFilePath))
 # get a list of strings from a path
 print(calcFilePath.split(os.path.sep))
 # get single file size

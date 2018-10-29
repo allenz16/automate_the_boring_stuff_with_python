@@ -24,7 +24,7 @@ print('mo4 :', mo4.group())
 
 endsWithNumber = re.compile(r'\d$')
 mo5 = endsWithNumber.search('Your number is 42')
-print('mo5 :', mo5)
+print('mo5 :', mo5.group())
 
 wholeStingIsNum = re.compile(r'^\d+$')
 print(wholeStingIsNum.search('54224215641231'))

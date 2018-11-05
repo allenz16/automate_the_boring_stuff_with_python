@@ -1,5 +1,6 @@
 import re
 import os
+import shutil
 datePattern = re.compile(r'''
     ^(.*)           # all text before the date
     ((0|1)?\d)-      # one or two digits for the month     
@@ -17,4 +18,9 @@ for a, b, c in os.walk('c:\\A'):
     print('a is :', a)
     print('b is :', b)
     print('c is :', c)
+
+
+
+
+
 

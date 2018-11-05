@@ -19,6 +19,8 @@ for a, b, c in os.walk('c:\\A'):
     print('b is :', b)
     print('c is :', c)
 
+print(os.path.getsize('c:\\A\\aws\index.html'))
+
 
 
 

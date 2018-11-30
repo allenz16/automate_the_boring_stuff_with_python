@@ -11,7 +11,7 @@ while True:
         break
     else:
         print('bad password')
-print('done and done')
+print('done')
 
 
 
